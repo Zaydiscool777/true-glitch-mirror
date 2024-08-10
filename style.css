@@ -2,12 +2,14 @@
 
 /* default to border-box */
 
+/*menus and small text*/
 body {
   font-family: Arial, sans-serif;
 }
 
+/*headers and big text*/
 #big {
-  margin: 1.5;
+  margin-left: 50px;
   font-family: Verdana, sans-serif;
 }
 
