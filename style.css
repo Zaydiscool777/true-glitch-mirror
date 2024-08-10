@@ -21,8 +21,10 @@ video {
 /* a */
 #grad1 {
   background-image: linear-gradient(lightgreen, #559955);
+  margin-bottom: 0px
 }
 
 #grad2 {
   background-color: #559955;
+  margin-top: 0px
 }
