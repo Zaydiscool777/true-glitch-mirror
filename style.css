@@ -1,13 +1,11 @@
-/* a minimalist set of CSS resets */
+/* text */
 
-/* default to border-box */
-
-/*menus and small text*/
+/* menus and small text */
 body {
   font-family: Arial, sans-serif;
 }
 
-/*headers and big text*/
+/* headers and big text */
 #big {
   margin-left: 50px;
   font-family: Verdana, sans-serif;
@@ -19,3 +17,5 @@ video {
   height: auto;
   max-width: 100%;
 }
+
+
