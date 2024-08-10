@@ -18,7 +18,7 @@ video {
   max-width: 100%;
 }
 
-/* a */
+/* gradient */
 #grad1 {
   background-image: linear-gradient(lightgreen, #559955);
   margin-bottom: 0px
@@ -28,3 +28,5 @@ video {
   background-color: #559955;
   margin-top: 0px
 }
+
+/* background */
