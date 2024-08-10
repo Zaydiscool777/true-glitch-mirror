@@ -6,9 +6,9 @@ body {
   font-family: Arial, sans-serif;
 }
 
-big {
+#big {
   margin: 1.5;
-  font-family: Google Sans, sans-serif;
+  font-family: Verdana, sans-serif;
 }
 
 /* images and videos max out at full width */
