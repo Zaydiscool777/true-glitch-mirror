@@ -20,5 +20,5 @@ video {
 
 /* a */
 #grad1 {
-  background-image: linear-gradient(red, yellow);
+  background-image: linear-gradient(lightgreen, green, green);
 }
