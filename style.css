@@ -3,6 +3,8 @@
 /* menus and small text */
 body {
   font-family: Arial, sans-serif;
+  margin: 0px
+  margin-left:
 }
 
 /* headers and big text */
@@ -20,5 +22,9 @@ video {
 
 /* a */
 #grad1 {
-  background-image: linear-gradient(lightgreen, green, green);
+  background-image: linear-gradient(lightgreen, #595);
+}
+
+#grad2 {
+  background-color: #595;
 }
