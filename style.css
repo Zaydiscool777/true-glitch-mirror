@@ -19,18 +19,14 @@ video {
 }
 
 /* gradient */
-#grad1 {
-  background-image: linear-gradient(lightgreen, #559955);
+#grad {
+  background: rgb(164,255,79);
+  background: linear-gradient(rgba(164,255,79,1) 0%, rgba(85,153,85,1) 45%, rgba(85,153,85,1) 100%);
   margin-bottom: 0px
-}
-
-#grad2 {
-  background-color: #559955;
-  margin-top: 0px
 }
 
 /* background */
 
 #back1 {
-  background-color: black
+  background-color: #c4ff8d
 }
