@@ -21,17 +21,19 @@ video {
 
 #logo {
   height: 150px;
-  margin-left: 50px;
-  margin-bottom: 50px
+  margin-top: 10px;
+  margin-left: 25px;
 }
 
 /* gradient */
 #grad {
   background: rgb(164,255,79);
   background: linear-gradient(rgba(164,255,79,1) 0%, rgba(85,153,85,1) 45%, rgba(85,153,85,1) 100%);
-  margin-bottom: 0px;
-  margin-left: 50px;
   font-family: Verdana, sans-serif;
+  font-size: 50px;
+  margin: auto;
+  margin-bottom: 0px;
+  margin-left: 25px;
 }
 
 /* background */
