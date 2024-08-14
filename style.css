@@ -28,5 +28,16 @@ video {
 /* background */
 
 #back1 {
-  background-color: #c4ff8d
+  background-color: #222244;
+  margin: 0px
+}
+
+#back2 {
+  background-color: #ffffff;
+  margin: 0px
+}
+
+#back3 {
+  background-color: #449999;
+  margin: 0px
 }
