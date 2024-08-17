@@ -53,3 +53,14 @@ video {
   margin: 0px;
   
 }
+
+/* dropdowns - reintech.io */
+
+#dropdown-menu .submenu {
+    display: none;
+}
+
+#dropdown-menu li:hover .submenu {
+    display: block;
+}
+
