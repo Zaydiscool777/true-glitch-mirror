@@ -54,13 +54,5 @@ video {
   
 }
 
-/* dropdowns - reintech.io */
-
-#dropdown-menu .submenu {
-    display: none;
-}
-
-#dropdown-menu li:hover .submenu {
-    display: block;
-}
-
+/* dropdowns - w3schools.org
+reintech.io is for hover. dev.to is a good alternative */
