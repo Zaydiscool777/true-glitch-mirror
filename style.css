@@ -56,8 +56,3 @@ video {
 
 /* dropdowns - dev.to
 reintech.io is for hover. */
-
-summary {
-  display: flex;
-  cursor: pointer;
-}
