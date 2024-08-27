@@ -2,5 +2,5 @@ function c(id){
   var details = document.getElementById(id);
   alert(id)
   alert(!document.getElementById(id).getAttribute("open"))
-  details.setAttribute("open", !(details.getAttribute(id)));
+  details.setAttribute("open", false);
 }
