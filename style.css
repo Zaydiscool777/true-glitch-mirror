@@ -86,16 +86,17 @@ a:link {
 /* visited link */
 a:visited {
   color: gray;
-  font-size: 1px;
+  font-size: 12px;
 }
 
 /* mouse over link */
 a:hover {
   color: green;
+  text-decoration: bold;
 }
 
 /* selected link */
 a:active {
   color: red;
-  dddd
+  text-decoration: italic;
 }
