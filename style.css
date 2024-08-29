@@ -66,3 +66,7 @@ reintech.io is for hover. */
   display: inline-block;
   padding: 1px;
 }
+
+#bbtop {
+  position: fixed
+}
