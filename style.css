@@ -101,6 +101,22 @@ a:active {
   text-decoration: italic;
 }
 
+/* week: on */
+
 disqus {
-  display: none
+  display: none;
+}
+
+nodisqus {
+  display: block;
+}
+
+/* defenition */
+
+span:hover + def {
+  display: block;
+}
+
+def {
+  display: none;
 }
