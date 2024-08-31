@@ -90,13 +90,13 @@ a:visited {
 /* mouse over link */
 a:hover {
   color: green;
-  text-decoration: bold;
+  text-decoration-style: bold;
 }
 
 /* selected link */
 a:active {
   color: red;
-  text-decoration: italic;
+  text-decoration-style: italic;
 }
 
 /* week: on */
@@ -109,13 +109,18 @@ nodisqus {
   display: block;
 }
 
-/* defenition */
+/* defenition/extra info */
 /* note to self: block creates inlines*/
+
+sm {
+  text-decoration-style: italic;
+}
 
 def {
   display: none;
 }
 
-span:hover def {
+sm:hover def {
   display: inline;
+  color: gray
 }
