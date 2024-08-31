@@ -1,11 +1,3 @@
-/* stupid span elem takes an entire line */
-
-span {
-  display: inline;
-  white-space: no-wrap;
-}
-
-
 /* menus and small text */
 
 body {
@@ -118,11 +110,12 @@ nodisqus {
 }
 
 /* defenition */
+/* note to self: block creates inlines*/
 
 def {
   display: none;
 }
 
 span:hover def {
-  display: block;
+  display: inline;
 }
