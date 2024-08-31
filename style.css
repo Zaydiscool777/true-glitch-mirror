@@ -1,4 +1,10 @@
-/* text */
+/* stupid span elem takes an entire line */
+
+span {
+  display: inline;
+  white-space: no-wrap;
+}
+
 
 /* menus and small text */
 
@@ -113,10 +119,10 @@ nodisqus {
 
 /* defenition */
 
-span:hover + def {
-  display: block;
-}
-
 def {
   display: none;
+}
+
+span:hover def {
+  display: block;
 }
