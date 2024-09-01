@@ -1,3 +1,10 @@
+/* highlight for "bug"-finding */
+
+put-tag-or-id-or-class here
+{
+  background-color: blue
+}
+
 /* menus and small text */
 
 body {
