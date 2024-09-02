@@ -2,7 +2,9 @@
 
 put-tag-or-id-or-class-here
 {
-  background-color: blue
+  background-color: blue;
+  background: blue;
+  color: blue
 }
 
 /* menus and small text */
