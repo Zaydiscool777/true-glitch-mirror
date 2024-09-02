@@ -31,7 +31,7 @@ $("#elementID").css({
 //the last property doesn't need a comma*/
 
 // https://stackoverflow.com/users/1061967/michael-zaporozhets
-const isMobile = navigator.userAgentData.mobile; //resolves true/false
-if (true){
-  document.getElementByID("header").style.margin = "auto"
-}
+//const isMobile = navigator.userAgentData.mobile; //resolves true/false
+//if (true){
+  document.getElementByID("btop").style.display = "none"
+//}
