@@ -133,3 +133,13 @@ sm:hover def {
   display: inline;
   color: gray
 }
+
+/* iframes and forms */
+
+iframe {
+  border: solid red;
+}
+
+form {
+  border: dotted blue;
+}
