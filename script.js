@@ -33,11 +33,5 @@ $("#elementID").css({
 // https://stackoverflow.com/users/1061967/michael-zaporozhets
 //const isMobile = navigator.userAgentData.mobile; //resolves true/false
 //if (true){
-  document.getElementByID("btop").style.display = "none";
+  //document.getElementByID("btop").style.display = "none";
 //}
-
-
-document.getElementByID("navopen").addEventListener("click", opennav);
-function opennav(){
-  document.getElementByID("nav") = !document.getElementByID("nav");
-};
