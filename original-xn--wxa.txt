@@ -17,13 +17,13 @@ See <a>λ.land/convey/ for more.
 # Values and constants
 
 There are three type of values: Numbers, characters and default values
-represented as `_`. A list is just a collection of values that are
+represented as <kbd>`_`. A list is just a collection of values that are
 next to each other.  Default values behave based on the function they
-are pushed into, f.e. _ into `+` is 0, _ into `*` is 1. Numbers and
+are pushed into, f.e. <kbd>_ into <kbd>`+` is 0, <kbd>_ into `*` is 1. Numbers and
 characters can be used interchangeably and will be casted to and from
 their ASCII value, though the resulting type will be the one of the
-main port. There can be only one value on a tile (exceptions are `&`
-and `~.`, which can queue values).
+main port. There can be only one value on a tile (exceptions are <kbd>`&`
+and <kbd>`~.`, which can queue values).
 
 Strings are enclosed within single quotes, f.e. 'Hello World!'. If
 numbers, strings or _ are at a start of a conveyor belt line, they are
@@ -63,13 +63,17 @@ Input:     Output:       Example: (9 - 7)   (8 will go right)
         ^           v                ^
         2           1                7
 
+In example one, 9 entered at port 0, and 7 entered at port 1. The first (and only) output exited at port 0.
+
 A dot `.` in a function's output will alter the function. For example,
 
-(1 + 2)   (max(1, 2))
+   (max(1, 2))
 
-  1+2         1+2
-   }           .}
-
+       1+2
+        .}
+(1 + 2)
+  1+2  
+   }   
 # Function definition
 
 A function is declared with an uppercase letter within a connected belt
