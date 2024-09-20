@@ -13,6 +13,10 @@ body {
   font-family: Arial, sans-serif;
 }
 
+mono {
+  font-family: none
+}
+
 /* headers and big text */
 
 #big {

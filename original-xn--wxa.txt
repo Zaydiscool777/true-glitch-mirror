@@ -1,0 +1,150 @@
+<h1>convey
+
+… is a somewhat codegolf-y 2D esolang based on conveyor belts, that
+will push values around in a factory.
+
+Example programs: <table>
+1.) sum of a list, 2.) all fibonacci numbers,
+3.) return only odd numbers:
+<code>
+1.)    }  2.)  1"<  3.) {"v
+    {/+?       "+1      2|!}
+     >,^       }          
+(gifs?)
+
+See <a>λ.land/convey/ for more.
+
+# Values and constants
+
+There are three type of values: Numbers, characters and default values
+represented as `_`. A list is just a collection of values that are
+next to each other.  Default values behave based on the function they
+are pushed into, f.e. _ into `+` is 0, _ into `*` is 1. Numbers and
+characters can be used interchangeably and will be casted to and from
+their ASCII value, though the resulting type will be the one of the
+main port. There can be only one value on a tile (exceptions are `&`
+and `~.`, which can queue values).
+
+Strings are enclosed within single quotes, f.e. 'Hello World!'. If
+numbers, strings or _ are at a start of a conveyor belt line, they are
+generators and will produce their respective value whenever possible. If
+they are in the middle of a conveyor belt line, they are placed there
+at the initialization of the factory.
+
+The program halts when no value moved last step and no value is waiting
+with `~`.
+
+# Functions
+
+Every function has a fixed number of in- and output ports, f.e. `+` has
+2 inputs and 1 output.  Conveyor belt directions are inferred to connect
+each input to an output port. A program that is ambigious is erroneous.
+In this case the conveor belt operators are needed: > v < ^.  They output
+into the direction they are pointing to and take exactly one input from
+any other direction.
+
+All functions operate simultaneously. All functions, if not otherwise
+specified, will only consume and produce blocks if every input port has
+a value.
+
+Many functions have 3 ports: 2 of the same type, and 1 of the opposing
+type.  Whenever there are 2 ports of the same type, there is a distinction
+between the main and the side port. `-` has 2 input ports and 1 output
+port. When both input ports have values, it will output the main port
+value minus the side port value.  Or: x - y.
+
+Port order for input and output is as follows:
+
+Input:     Output:       Example: (9 - 7)   (8 will go right)
+
+        0           3                9            }
+        v           ^                v            ^
+      1>f<3       2<f>0              ->}        8>?>}
+        ^           v                ^
+        2           1                7
+
+A dot `.` in a function's output will alter the function. For example,
+
+(1 + 2)   (max(1, 2))
+
+  1+2         1+2
+   }           .}
+
+# Function definition
+
+A function is declared with an uppercase letter within a connected belt
+grid. Another function can then call this function with the corresponding
+lowercase letter. `{` and `}` are the functions in- and outputs, and
+so a declared function can have up to 4 in- and outputs together. For
+example in
+
+    1
+{>A>+>}   {>a>a>}
+
+every input value will traverse twice through A and will be incremented
+by 2 at the end. Recursion might or might not be possible in the future.
+
+# Vocabulary
+
+Symbol Name            In Out _x _y Description
+Number                 0  1         Generate the number
+Number                 1  1         Start with the number
+'…'    String          0  1         Generate the string
+'…'    String          1  1         Start with the string
+_      Default         0  1         Generate _
+_      Default         1  1         Start with _
+.      Alternative     1  1         Modifies input function
+`      Reverse         1  1         Reverses port order in input function
+
+Input/Output
+Symbol Name            In Out _x _y Description
+{      Input           0  1         Input
+}      Ouput           1  0   \n    Output
+[      Cap             0  1         Dummy output
+]      Sink            1  0         Dummy input
+
+Control flow functions
+Symbol Name            In Out _x _y Description
+,      Join            2  1         Join two paths favoring main input.
+#      Crossing        2  2         Crossing: one path must be vertical,
+                                     the other horizontal. They do not block
+                                     each other.
+;      Gate            2  1         Whenever a value from the side port
+                                     enters, toggles between a closed and
+                                     open gate for the main path.
+:      Pass            2  1      1  Let y values through main path.
+?      Try             1  2         If main output is blocked, move to side
+                                     output.
+@      Steer           2  2      1  Move x to main or side output, depending
+                                     on boolean y.
+"      Copy            1  2         Copy input to both outputs.
+/      Raising         1  2         Output _ to side port on rising flank.
+/.     Indices         1  2         Output indices to side port.
+\      Falling         1  2         Output length to side port on falling
+                                     flank.
+&      Queue           1  1         Queue value if output is blocked.
+~      Wait            2  1      1  Wait for y time steps.
+~.     Batch           2  1      1  Like & but only outputs if y values are
+                                     waiting.
+!      Take            2  1      1  x duplicated y times.
+
+Mathematical functions
+Symbol Name            In Out _x _y Description
+$      Set             2  1         y
++      Plus            2  1   0     x + y
++.     Max             2  1   -∞    max(x, y)
+-      Minus           2  1   0     x - y
+-.     Min             2  1   ∞     min(x, y)
+*      Mult            2  1   0     x * y
+*.     Pow             2  1   0  e  y ^ x
+%      Divide          2  1         x / y or iff y is _, then signum(x)
+%.     Log             2  1   0  e  ln_y(x)
+|      Mod             2  1         x mod y or iff y is _, then abs(x)
+=      Equal           2  1         x = y
+=.     Different       2  1         x ≠ y
+(      Less            2  1   -∞ ∞  x < y
+(.     Lesseq          2  1   -∞ ∞  x ≤ y
+)      Greater         2  1   ∞ -∞  x > y
+).     Greq            2  1   ∞ -∞  x ≥ y
+&.     Ceiling         1  1         ceil(x)
+_.     Floor           1  1         floor(x)
