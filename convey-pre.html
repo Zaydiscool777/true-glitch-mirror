@@ -1,45 +1,67 @@
-<html><body>
-<title>xash.itch.io</title>
-… is a somewhat codegolf-y 2D esolang based on conveyor belts, that
-will push values around in a factory.
-<br><br>
-Example programs:
-<table><tbody>
-  <tr>
-    <td>Sum of a list</td>
-    <td><code>
-   }<br>
-{/+?<br>
- &gt;,^<br>
-      </code></td>
-  </tr>
-  <tr>
-    <td>All Fibboncci numbers</td>
-    <td><code>
-1"&lt;<br>
-"+1<br>
-}<br>
-      </code></td>
-  </tr>
-  <tr>
-    <td>Return only odd numbers</td>
-    <td><code>
-{"v<br>
-2|!}<br>
-      </code></td>
-  </tr>
-</tbody></table>
-<br>See λ.land/convey/ for more.<br>
+<html>
+  <body>
+    <title>xash.itch.io</title>
+    <p>
+      … is a somewhat codegolf-y 2D esolang based on conveyor belts, that will
+      push values around in a factory.
+    </p>
+    Example programs:
+    <table>
+      <tbody>
+        <tr>
+          <td>Sum of a list</td>
+          <td>
+            <code>
+              }<br />
+              {/+?<br />
+              &gt;,^<br />
+            </code>
+          </td>
+        </tr>
+        <tr>
+          <td>All Fibboncci numbers</td>
+          <td>
+            <code>
+              1"&lt;<br />
+              "+1<br />
+              }<br />
+            </code>
+          </td>
+        </tr>
+        <tr>
+          <td>Return only odd numbers</td>
+          <td>
+            <code>
+              {"v<br />
+              2|!}<br />
+            </code>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <br />See <a href="https://xn--wxa.land/convey/">λ.land/convey/</a> for
+    more.
 
-<h2>Values and constants</h2>
+    <h2>Values and constants</h2>
 
-There are three type of values: Numbers, characters and default values
-represented as <kbd>_</kbd>. A list is just a collection of values that are
-next to each other.  Default values behave based on the function they
-are pushed into, f.e. <kbd>_</kbd> into <kbd>+</kbd> is 0, <kbd>_</kbd> into <kbd>*</kbd> is 1. Numbers and
-characters can be used interchangeably and will be casted to and from
-their ASCII value, though the resulting type will be the one of the
-main port. There can be only one value on a tile (exceptions are <kbd>&</kbd>
-and <kbd>~.</kbd>, which can queue values).
+    <p>
+      There are three type of values: Numbers, characters and default values
+      represented as <kbd>_</kbd>. A list is just a collection of values that
+      are next to each other. Default values behave based on the function they
+      are pushed into, f.e. <kbd>_</kbd> into <kbd>+</kbd> is 0,
+      <kbd>_</kbd> into <kbd>*</kbd> is 1. Numbers and characters can be used
+      interchangeably and will be casted to and from their ASCII value, though
+      the resulting type will be the one of the main port. There can be only one
+      value on a tile (exceptions are <kbd>&</kbd> and <kbd>~.</kbd>, which can
+      queue values).
+    </p>
 
-</body></html>
+    <p>
+      Strings are enclosed within single quotes, f.e. 'Hello World!'. If
+      numbers, strings or _ are at a start of a conveyor belt line, they are
+      generators and will produce their respective value whenever possible. If
+      they are in the middle of a conveyor belt line, they are placed there at
+      the initialization of the factory.
+    </p>
+  </body>
+</html>
