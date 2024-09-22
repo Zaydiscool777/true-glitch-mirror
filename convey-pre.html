@@ -108,30 +108,30 @@
         <tbody>
           <tr>
             <td>
-              <div>&nbsp; 0</div>
-              <div>&nbsp; v</div>
+              <code><div>&nbsp;&nbsp;0</div>
+              <div>&nbsp;&nbsp;v</div>
               <div>1&gt;f&lt;3</div>
-              <div>&nbsp; ^</div>
-              <div>&nbsp; 2&nbsp;&nbsp;</div>
+              <div>&nbsp;&nbsp;^</div>
+                <div>&nbsp;&nbsp;2&nbsp;&nbsp;</div></code>
             </td>
             <td>
-              <div>&nbsp; 3</div>
-              <div>&nbsp; ^</div>
+              <code><div>&nbsp;&nbsp;3</div>
+              <div>&nbsp;&nbsp;^</div>
               <div>2&lt;f&gt;0</div>
-              <div>&nbsp; v</div>
-              <div>&nbsp; 1&nbsp;&nbsp;</div>
+              <div>&nbsp;&nbsp;v</div>
+          <div>&nbsp;&nbsp;1&nbsp;&nbsp;</div></code>
             </td>
             <td>
-              <div>9</div>
+              <code><div>9</div>
               <div>v</div>
               <div>-&gt;}</div>
               <div>^</div>
-              <div>7</div>
+                <div>7</div></code>
             </td>
             <td>
-              <div>&nbsp; }</div>
-              <div>&nbsp; ^</div>
-              <div>8&gt;?&gt;}</div>
+              <code><div>&nbsp;&nbsp;}</div>
+              <div>&nbsp;&nbsp;^</div>
+                <div>8&gt;?&gt;}</div></code>
             </td>
           </tr>
         </tbody>
@@ -149,8 +149,8 @@
     </thead>
     <tbody>
         <tr>
-            <td>1+2<br>&nbsp;}</td>
-            <td>1+2<br>&nbsp;.}</td>
+            <td><code></code>1+2<br>&nbsp;}</td>
+              <td><code></code>1+2<br>&nbsp;.}</td>
         </tr>
     </tbody>
 </table>
@@ -168,7 +168,13 @@
 grid. Another function can then call this function with the corresponding
 lowercase letter. <kbd>{</kbd> and <kbd>}</kbd> are the functions inputs and outputs, and
 so a declared function can have up to 4 inputs and outputs together. For
-example in
+example:<br>
+      <code>
+&nbsp;&nbsp;&nbsp;&nbsp;1<br>
+{>A>+>}   {>a>a>}
+      </code>
+In the above example, every input value will traverse twice through A and will be incremented
+by 2 at the end. Recursion might or might not be possible in the future.
     </p>
   </body>
 </html>
