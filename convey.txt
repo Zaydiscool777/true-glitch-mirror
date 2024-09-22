@@ -146,3 +146,63 @@ $      Set             2  1         y
 ).     Greq            2  1   ∞ -∞  x ≥ y
 &.     Ceiling         1  1         ceil(x)
 _.     Floor           1  1         floor(x)
+
+
+
+
+Symbol Name            In Out _x _y Description
+Number                 0  1         Generate the number
+Number                 1  1         Start with the number
+'…'    String          0  1         Generate the string
+'…'    String          1  1         Start with the string
+_      Default         0  1         Generate _
+_      Default         1  1         Start with _
+.      Alternative     1  1         Modifies input function
+`      Reverse         1  1         Reverses port order in input function
+
+{      Input           0  1         Input
+}      Ouput           1  0   \n    Output
+[      Cap             0  1         Dummy output
+]      Sink            1  0         Dummy input
+
+,      Join            2  1         Join two paths favoring main input.
+#      Crossing        2  2         Crossing: one path must be vertical,
+                                     the other horizontal. They do not block
+                                     each other.
+;      Gate            2  1         Whenever a value from the side port
+                                     enters, toggles between a closed and
+                                     open gate for the main path.
+:      Pass            2  1      1  Let y values through main path.
+?      Try             1  2         If main output is blocked, move to side
+                                     output.
+@      Steer           2  2      1  Move x to main or side output, depending
+                                     on boolean y.
+"      Copy            1  2         Copy input to both outputs.
+/      Raising         1  2         Output _ to side port on rising flank.
+/.     Indices         1  2         Output indices to side port.
+\      Falling         1  2         Output length to side port on falling
+                                     flank.
+&      Queue           1  1         Queue value if output is blocked.
+~      Wait            2  1      1  Wait for y time steps.
+~.     Batch           2  1      1  Like & but only outputs if y values are
+                                     waiting.
+!      Take            2  1      1  x duplicated y times.
+
+$      Set             2  1         y
++      Plus            2  1   0     x + y
++.     Max             2  1   -∞    max(x, y)
+-      Minus           2  1   0     x - y
+-.     Min             2  1   ∞     min(x, y)
+*      Mult            2  1   0     x * y
+*.     Pow             2  1   0  e  y ^ x
+%      Divide          2  1         x / y or iff y is _, then signum(x)
+%.     Log             2  1   0  e  ln_y(x)
+|      Mod             2  1         x mod y or iff y is _, then abs(x)
+=      Equal           2  1         x = y
+=.     Different       2  1         x ≠ y
+(      Less            2  1   -∞ ∞  x < y
+(.     Lesseq          2  1   -∞ ∞  x ≤ y
+)      Greater         2  1   ∞ -∞  x > y
+).     Greq            2  1   ∞ -∞  x ≥ y
+&.     Ceiling         1  1         ceil(x)
+_.     Floor           1  1         floor(x)
