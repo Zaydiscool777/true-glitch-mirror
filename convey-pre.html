@@ -57,11 +57,16 @@
     </p>
 
     <p>
-      Strings are enclosed within single quotes, f.e. 'Hello World!'. If
-      numbers, strings or _ are at a start of a conveyor belt line, they are
+      Strings are enclosed within single quotes, f.e. <code>'Hello World!'</code>. If
+      numbers, strings or <kbd>_</kbd> are at a start of a conveyor belt line, they are
       generators and will produce their respective value whenever possible. If
       they are in the middle of a conveyor belt line, they are placed there at
       the initialization of the factory.
+    </p>
+    
+    <p>
+        The program halts when no value moved last step and no value is waiting
+      with `~`.
     </p>
   </body>
 </html>
