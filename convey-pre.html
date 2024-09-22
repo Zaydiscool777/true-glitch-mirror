@@ -57,16 +57,28 @@
     </p>
 
     <p>
-      Strings are enclosed within single quotes, f.e. <code>'Hello World!'</code>. If
-      numbers, strings or <kbd>_</kbd> are at a start of a conveyor belt line, they are
-      generators and will produce their respective value whenever possible. If
-      they are in the middle of a conveyor belt line, they are placed there at
-      the initialization of the factory.
+      Strings are enclosed within single quotes, f.e.
+      <code>'Hello World!'</code>. If numbers, strings or <kbd>_</kbd> are at a
+      start of a conveyor belt line, they are generators and will produce their
+      respective value whenever possible. If they are in the middle of a
+      conveyor belt line, they are placed there at the initialization of the
+      factory.
     </p>
-    
+
     <p>
-        The program halts when no value moved last step and no value is waiting
-      with `~`.
+      The program halts when no value moved last step and no value is waiting
+      with <kbd>~</kbd>.
+    </p>
+
+    <h2>Functions</h2>
+
+    <p>
+      Every function has a fixed number of input and output ports, f.e. <kbd>+</kbd> has 2
+      inputs and 1 output. Conveyor belt directions are inferred to connect each
+      input to an output port. A program that is ambigious is erroneous. In this
+      case, the conveyor belt operators are, as needed: <kbd>&gt; v &lt; ^</kbd>. They output into the
+      direction they are pointing to and take exactly one input from any other
+      direction.
     </p>
   </body>
 </html>
