@@ -73,12 +73,71 @@
     <h2>Functions</h2>
 
     <p>
-      Every function has a fixed number of input and output ports, f.e. <kbd>+</kbd> has 2
-      inputs and 1 output. Conveyor belt directions are inferred to connect each
-      input to an output port. A program that is ambigious is erroneous. In this
-      case, the conveyor belt operators are, as needed: <kbd>&gt; v &lt; ^</kbd>. They output into the
-      direction they are pointing to and take exactly one input from any other
-      direction.
+      Every function has a fixed number of input and output ports, f.e.
+      <kbd>+</kbd> has 2 inputs and 1 output. Conveyor belt directions are
+      inferred to connect each input to an output port. A program that is
+      ambigious is erroneous. In this case, the conveyor belt operators are, as
+      needed: <kbd>&gt; v &lt; ^</kbd>. They output into the direction they are
+      pointing to and take exactly one input from any other direction.
     </p>
+
+    <p>
+      All functions operate simultaneously. All functions, if not otherwise
+      specified, will only consume and produce blocks if every input port has a
+      value.
+    </p>
+
+    <p>
+      Many functions have 3 ports: 2 of the same type, and 1 of the opposing
+      type. Whenever there are 2 ports of the same type, there is a distinction
+      between the main and the side port. <kbd>-</kbd> has 2 input ports and 1
+      output port. When both input ports have values, it will output the main
+      port value minus the side port value. Or, in otherwords, "x - y".
+    </p>
+
+      <table>
+        <caption>Port order for input and output</caption>
+        <thead>
+          <tr>
+            <th>Input:</th>
+            <th>Output:</th>
+            <th>Example 1</th>
+            <th>Example 2</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <div>&nbsp; 0</div>
+              <div>&nbsp; v</div>
+              <div>1&gt;f&lt;3</div>
+              <div>&nbsp; ^</div>
+              <div>&nbsp; 2&nbsp;&nbsp;</div>
+            </td>
+            <td>
+              <div>&nbsp; 3</div>
+              <div>&nbsp; ^</div>
+              <div>2&lt;f&gt;0</div>
+              <div>&nbsp; v</div>
+              <div>&nbsp; 1&nbsp;&nbsp;</div>
+            </td>
+            <td>
+              <div>9</div>
+              <div>v</div>
+              <div>-&gt;}</div>
+              <div>^</div>
+              <div>7</div>
+            </td>
+            <td>
+              <div>&nbsp; }</div>
+              <div>&nbsp; ^</div>
+              <div>8&gt;?&gt;}</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    
+    A dot `.` in a function's output will alter the function.
+    
   </body>
 </html>
