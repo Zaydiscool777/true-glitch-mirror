@@ -90,91 +90,534 @@
     <p>
       Many functions have 3 ports: 2 of the same type, and 1 of the opposing
       type. Whenever there are 2 ports of the same type, there is a distinction
-      between the main and the side port. One example, <kbd>-</kbd> has 2 input ports and 1
-      output port. When both input ports have values, it will output the main
-      port value minus the side port value. Or, in otherwords, "x - y".
+      between the main and the side port. One example, <kbd>-</kbd> has 2 input
+      ports and 1 output port. When both input ports have values, it will output
+      the main port value minus the side port value. Or, in otherwords, "x - y".
     </p>
 
-      <table>
-        <caption>Port order for input and output</caption>
-        <thead>
-          <tr>
-            <th>Input:</th>
-            <th>Output:</th>
-            <th>Example 1</th>
-            <th>Example 2</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>
-              <code><div>&nbsp;&nbsp;0</div>
+    <table>
+      <caption>
+        Port order for input and output
+      </caption>
+      <thead>
+        <tr>
+          <th>Input:</th>
+          <th>Output:</th>
+          <th>Example 1</th>
+          <th>Example 2</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <code
+              ><div>&nbsp;&nbsp;0</div>
               <div>&nbsp;&nbsp;v</div>
               <div>1&gt;f&lt;3</div>
               <div>&nbsp;&nbsp;^</div>
-                <div>&nbsp;&nbsp;2&nbsp;&nbsp;</div></code>
-            </td>
-            <td>
-              <code><div>&nbsp;&nbsp;3</div>
+              <div>&nbsp;&nbsp;2&nbsp;&nbsp;</div></code
+            >
+          </td>
+          <td>
+            <code
+              ><div>&nbsp;&nbsp;3</div>
               <div>&nbsp;&nbsp;^</div>
               <div>2&lt;f&gt;0</div>
               <div>&nbsp;&nbsp;v</div>
-          <div>&nbsp;&nbsp;1&nbsp;&nbsp;</div></code>
-            </td>
-            <td>
-              <code><div>9</div>
+              <div>&nbsp;&nbsp;1&nbsp;&nbsp;</div></code
+            >
+          </td>
+          <td>
+            <code
+              ><div>9</div>
               <div>v</div>
               <div>-&gt;}</div>
               <div>^</div>
-                <div>7</div></code>
-            </td>
-            <td>
-              <code><div>&nbsp;&nbsp;}</div>
+              <div>7</div></code
+            >
+          </td>
+          <td>
+            <code
+              ><div>&nbsp;&nbsp;}</div>
               <div>&nbsp;&nbsp;^</div>
-                <div>8&gt;?&gt;}</div></code>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    
+              <div>8&gt;?&gt;}</div></code
+            >
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
     <p>A dot (<kbd>.</kbd>) in a function's output will alter the function.</p>
-    
-<table>
-    <caption>Example:</caption>
-    <thead>
+
+    <table>
+      <caption>
+        Example:
+      </caption>
+      <thead>
         <tr>
-            <th>Addition</th>
-            <th>Maximum</th>
+          <th>Addition</th>
+          <th>Maximum</th>
         </tr>
-    </thead>
-    <tbody>
+      </thead>
+      <tbody>
         <tr>
-            <td><code></code>1+2<br>&nbsp;}</td>
-              <td><code></code>1+2<br>&nbsp;.}</td>
+          <td><code></code>1+2<br />&nbsp;}</td>
+          <td><code></code>1+2<br />&nbsp;.}</td>
         </tr>
-    </tbody>
-</table>
-<!--<div style="margin-top:8px">Made with <a href="https://www.htmltables.io/" target="_blank">HTML Tables</a></div>-->
-  <p>
-    <sm>(But wait, why doess row 2 look like that?) <def>This is because you put the <kbd>.</kbd> under the function you want to modify. Then treat it as if it wasn't there. This is simply a minor inconvenience when dealing with esolangs like these.</def></sm> 
-  </p>
-    
-    <h2>
-      Function Definition
-    </h2>
-    
+      </tbody>
+    </table>
+    <!--<div style="margin-top:8px">Made with <a href="https://www.htmltables.io/" target="_blank">HTML Tables</a></div>-->
+    <p>
+      <sm
+        >(But wait, why doess row 2 look like that?)
+        <def
+          >This is because you put the <kbd>.</kbd> under the function you want
+          to modify. Then treat it as if it wasn't there. This is simply a minor
+          inconvenience when dealing with esolangs like these.</def
+        ></sm
+      >
+    </p>
+
+    <h2>Function Definition</h2>
+
     <p>
       A function is declared with an uppercase letter within a connected belt
-grid. Another function can then call this function with the corresponding
-lowercase letter. <kbd>{</kbd> and <kbd>}</kbd> are the functions inputs and outputs, and
-so a declared function can have up to 4 inputs and outputs together. For
-example:<br>
+      grid. Another function can then call this function with the corresponding
+      lowercase letter. <kbd>{</kbd> and <kbd>}</kbd> are the functions inputs
+      and outputs, and so a declared function can have up to 4 inputs and
+      outputs together. For example:<br />
       <code>
-&nbsp;&nbsp;&nbsp;&nbsp;1<br>
-{>A>+>}   {>a>a>}
+        &nbsp;&nbsp;&nbsp;&nbsp;1<br />
+        {>A>+>} {>a>a>}
       </code>
-In the above example, every input value will traverse twice through A and will be incremented
-by 2 at the end. Recursion might or might not be possible in the future.
+      In the above example, every input value will traverse twice through A and
+      will be incremented by 2 at the end. Recursion might or might not be
+      possible in the future.
     </p>
+
+    <h2>Vocabulary</h2>
+
+    <sm
+      >(Is this sorted?)<def
+        >Why, yes, it is. The order is: Data, I/O, Control Flow, and Math.</def
+      ></sm
+    >
+
+    <!-- remind me to not use seo.ai. -->
+    <table>
+      <tbody>
+        <tr>
+          <th>Symbol</th>
+          <th>Name</th>
+          <th>In</th>
+          <th>Out</th>
+          <th>_x</th>
+          <th>_y</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>Number</td>
+          <td></td>
+          <td>0</td>
+          <td>1</td>
+          <td></td>
+          <td></td>
+          <td>Generate the number</td>
+        </tr>
+        <tr>
+          <td>Number</td>
+          <td></td>
+          <td>1</td>
+          <td>1</td>
+          <td></td>
+          <td></td>
+          <td>Start with the number</td>
+        </tr>
+        <tr>
+          <td>…'</td>
+          <td>String</td>
+          <td>0</td>
+          <td>1</td>
+          <td></td>
+          <td></td>
+          <td>Generate the string</td>
+        </tr>
+        <tr>
+          <td>…'</td>
+          <td>String</td>
+          <td>1</td>
+          <td>1</td>
+          <td></td>
+          <td></td>
+          <td>Start with the string</td>
+        </tr>
+        <tr>
+          <td>_</td>
+          <td>Default</td>
+          <td>0</td>
+          <td>1</td>
+          <td></td>
+          <td></td>
+          <td>Generate _</td>
+        </tr>
+        <tr>
+          <td>_</td>
+          <td>Default</td>
+          <td>1</td>
+          <td>1</td>
+          <td></td>
+          <td></td>
+          <td>Start with _</td>
+        </tr>
+        <tr>
+          <td>.</td>
+          <td>Alternative</td>
+          <td>1</td>
+          <td>1</td>
+          <td></td>
+          <td></td>
+          <td>Modifies input function</td>
+        </tr>
+        <tr>
+          <td>`</td>
+          <td>Reverse</td>
+          <td>1</td>
+          <td>1</td>
+          <td></td>
+          <td></td>
+          <td>Reverses port order in input function</td>
+        </tr>
+        <tr>
+          <td>{</td>
+          <td>Input</td>
+          <td>0</td>
+          <td>1</td>
+          <td></td>
+          <td></td>
+          <td>Input</td>
+        </tr>
+        <tr>
+          <td>}</td>
+          <td>Ouput</td>
+          <td>1</td>
+          <td>0</td>
+          <td>\n</td>
+          <td></td>
+          <td>Output</td>
+        </tr>
+        <tr>
+          <td>[</td>
+          <td>Cap</td>
+          <td>0</td>
+          <td>1</td>
+          <td></td>
+          <td></td>
+          <td>Dummy output</td>
+        </tr>
+        <tr>
+          <td>]</td>
+          <td>Sink</td>
+          <td>1</td>
+          <td>0</td>
+          <td></td>
+          <td></td>
+          <td>Dummy input</td>
+        </tr>
+        <tr>
+          <td>,</td>
+          <td>Join</td>
+          <td>2</td>
+          <td>1</td>
+          <td></td>
+          <td></td>
+          <td>Join two paths favoring main input.</td>
+        </tr>
+        <tr>
+          <td>#</td>
+          <td>Crossing</td>
+          <td>2</td>
+          <td>2</td>
+          <td></td>
+          <td></td>
+          <td>
+            Crossing: one path must be vertical, the other horizontal. They do
+            not block each other.
+          </td>
+        </tr>
+        <tr>
+          <td>;</td>
+          <td>Gate</td>
+          <td>2</td>
+          <td>1</td>
+          <td></td>
+          <td></td>
+          <td>
+            Whenever a value from the side port enters, toggles between a closed
+            and open gate for the main path.
+          </td>
+        </tr>
+        <tr>
+          <td>:</td>
+          <td>Pass</td>
+          <td>2</td>
+          <td>1</td>
+          <td></td>
+          <td>1</td>
+          <td>Let y values through main path.</td>
+        </tr>
+        <tr>
+          <td>?</td>
+          <td>Try</td>
+          <td>1</td>
+          <td>2</td>
+          <td></td>
+          <td></td>
+          <td>If main output is blocked, move to side output.</td>
+        </tr>
+        <tr>
+          <td>@</td>
+          <td>Steer</td>
+          <td>2</td>
+          <td>2</td>
+          <td></td>
+          <td>1</td>
+          <td>Move x to main or side output, depending on boolean y.</td>
+        </tr>
+        <tr>
+          <td>"</td>
+          <td>Copy</td>
+          <td>1</td>
+          <td>2</td>
+          <td></td>
+          <td></td>
+          <td>Copy input to both outputs.</td>
+        </tr>
+        <tr>
+          <td>/</td>
+          <td>Raising</td>
+          <td>1</td>
+          <td>2</td>
+          <td></td>
+          <td></td>
+          <td>Output _ to side port on rising flank.</td>
+        </tr>
+        <tr>
+          <td>/.</td>
+          <td>Indices</td>
+          <td>1</td>
+          <td>2</td>
+          <td></td>
+          <td></td>
+          <td>Output indices to side port.</td>
+        </tr>
+        <tr>
+          <td>\</td>
+          <td>Falling</td>
+          <td>1</td>
+          <td>2</td>
+          <td></td>
+          <td></td>
+          <td>Output length to side port on falling flank.</td>
+        </tr>
+        <tr>
+          <td>&amp;</td>
+          <td>Queue</td>
+          <td>1</td>
+          <td>1</td>
+          <td></td>
+          <td></td>
+          <td>Queue value if output is blocked.</td>
+        </tr>
+        <tr>
+          <td>~</td>
+          <td>Wait</td>
+          <td>2</td>
+          <td>1</td>
+          <td></td>
+          <td>1</td>
+          <td>Wait for y time steps.</td>
+        </tr>
+        <tr>
+          <td>~.</td>
+          <td>Batch</td>
+          <td>2</td>
+          <td>1</td>
+          <td></td>
+          <td>1</td>
+          <td>Like &amp; but only outputs if y values are waiting.</td>
+        </tr>
+        <tr>
+          <td>!</td>
+          <td>Take</td>
+          <td>2</td>
+          <td>1</td>
+          <td></td>
+          <td>1</td>
+          <td>x duplicated y times.</td>
+        </tr>
+        <tr>
+          <td>$</td>
+          <td>Set</td>
+          <td>2</td>
+          <td>1</td>
+          <td></td>
+          <td></td>
+          <td>y</td>
+        </tr>
+        <tr>
+          <td>=+</td>
+          <td>Plus</td>
+          <td>2</td>
+          <td>1</td>
+          <td>0</td>
+          <td></td>
+          <td>x + y</td>
+        </tr>
+        <tr>
+          <td>=+.</td>
+          <td>Max</td>
+          <td>2</td>
+          <td>1</td>
+          <td>-∞</td>
+          <td></td>
+          <td>max(x, y)</td>
+        </tr>
+        <tr>
+          <td>-</td>
+          <td>Minus</td>
+          <td>2</td>
+          <td>1</td>
+          <td>0</td>
+          <td></td>
+          <td>x - y</td>
+        </tr>
+        <tr>
+          <td>-.</td>
+          <td>Min</td>
+          <td>2</td>
+          <td>1</td>
+          <td>∞</td>
+          <td></td>
+          <td>min(x, y)</td>
+        </tr>
+        <tr>
+          <td>*</td>
+          <td>Mult</td>
+          <td>2</td>
+          <td>1</td>
+          <td>0</td>
+          <td></td>
+          <td>x * y</td>
+        </tr>
+        <tr>
+          <td>*.</td>
+          <td>Pow</td>
+          <td>2</td>
+          <td>1</td>
+          <td>0</td>
+          <td>e</td>
+          <td>y ^ x</td>
+        </tr>
+        <tr>
+          <td>%</td>
+          <td>Divide</td>
+          <td>2</td>
+          <td>1</td>
+          <td></td>
+          <td></td>
+          <td>x / y or iff y is _, then signum(x)</td>
+        </tr>
+        <tr>
+          <td>%.</td>
+          <td>Log</td>
+          <td>2</td>
+          <td>1</td>
+          <td>0</td>
+          <td>e</td>
+          <td>ln_y(x)</td>
+        </tr>
+        <tr>
+          <td>|</td>
+          <td>Mod</td>
+          <td>2</td>
+          <td>1</td>
+          <td></td>
+          <td></td>
+          <td>x mod y or iff y is _, then abs(x)</td>
+        </tr>
+        <tr>
+          <td>=</td>
+          <td>Equal</td>
+          <td>2</td>
+          <td>1</td>
+          <td></td>
+          <td></td>
+          <td>x = y</td>
+        </tr>
+        <tr>
+          <td>=.</td>
+          <td>Different</td>
+          <td>2</td>
+          <td>1</td>
+          <td></td>
+          <td></td>
+          <td>x ≠ y</td>
+        </tr>
+        <tr>
+          <td>(</td>
+          <td>Less</td>
+          <td>2</td>
+          <td>1</td>
+          <td>-∞</td>
+          <td>∞</td>
+          <td>x &lt; y</td>
+        </tr>
+        <tr>
+          <td>(.</td>
+          <td>Lesseq</td>
+          <td>2</td>
+          <td>1</td>
+          <td>-∞</td>
+          <td>∞</td>
+          <td>x ≤ y</td>
+        </tr>
+        <tr>
+          <td>)</td>
+          <td>Greater</td>
+          <td>2</td>
+          <td>1</td>
+          <td>∞</td>
+          <td>-∞</td>
+          <td>x &gt; y</td>
+        </tr>
+        <tr>
+          <td>).</td>
+          <td>Greq</td>
+          <td>2</td>
+          <td>1</td>
+          <td>∞</td>
+          <td>-∞</td>
+          <td>x ≥ y</td>
+        </tr>
+        <tr>
+          <td>&amp;.</td>
+          <td>Ceiling</td>
+          <td>1</td>
+          <td>1</td>
+          <td></td>
+          <td></td>
+          <td>ceil(x)</td>
+        </tr>
+        <tr>
+          <td>_.</td>
+          <td>Floor</td>
+          <td>1</td>
+          <td>1</td>
+          <td></td>
+          <td></td>
+          <td>floor(x)</td>
+        </tr>
+      </tbody>
+    </table>
   </body>
 </html>
