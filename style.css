@@ -117,11 +117,11 @@ a:active {
 /* week: on */
 
 disqus {
-  display: none;
+  display: block;
 }
 
 nodisqus {
-  display: block;
+  display: none;
 }
 
 /* definition/extra info */
