@@ -8,6 +8,8 @@ w3schools
 
 i have to move this to github
 
+https://archive.org/details/ducklife1ost
+
     <div id="disqus_thread"></div>
     <!--Append #disqus_thread to the href attribute in your links. This will tell Disqus which links to look up and return the comment count. For example: <a href="http://foo.com/bar.html#disqus_thread">Link</a>.-->
     <script>
