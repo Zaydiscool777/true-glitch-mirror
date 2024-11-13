@@ -149,3 +149,26 @@ iframe {
 form {
   border: dotted blue;
 }
+
+/* recreational */
+/* marquee - wikipedia */
+
+@keyframes marquee {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+marqc {
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+    animation: marquee 10s linear infinite;
+}
+
+marq {
+    display: inline-block;
+}
