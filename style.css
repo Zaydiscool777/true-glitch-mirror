@@ -43,7 +43,7 @@ video {
   background: rgb(164, 255, 79);
   background: linear-gradient(
     rgba(164, 255, 79, 1) 0%,
-    rgba(85, 153, 85, 1) 45%,
+    rgba(85, 153, 85, 1) 75%,
     rgba(85, 153, 85, 1) 100%
   );
   font-family: Verdana, sans-serif;
@@ -125,7 +125,7 @@ nodisqus {
 }
 
 /* definition/extra info */
-/* note to self: block creates inlines*/
+/* note to self: block creates inlines */
 
 sm {
   text-decoration-style: italic;
@@ -162,20 +162,11 @@ form {
     }
 }
 
-@keyframes scroll {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(calc(-100% - var(--gap)));
-  }
-}
-
 marqc {
     white-space: nowrap;
     overflow: hidden;
     position: relative;
-    animation: scroll 10s linear infinite;
+    animation: marquee 10s linear infinite;
 }
 
 marq {
