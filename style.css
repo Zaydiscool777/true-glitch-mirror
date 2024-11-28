@@ -162,11 +162,20 @@ form {
     }
 }
 
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+
 marqc {
     white-space: nowrap;
     overflow: hidden;
     position: relative;
-    animation: marquee 10s linear infinite;
+    animation: scroll 10s linear infinite;
 }
 
 marq {
