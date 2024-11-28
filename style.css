@@ -140,6 +140,17 @@ sm:hover def {
   color: gray;
 }
 
+note {
+  outline: solid 2px;
+  padding: 0.25em 0.5em;
+  background-color: #fcfc83;
+  outline-color: #f2f20d;      
+}
+
+note::before {
+  content: "note:"
+}
+
 /* iframes and forms */
 
 iframe {
