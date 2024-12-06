@@ -127,6 +127,8 @@ nodisqus {
 /* definition/extra info */
 /* note to self: block creates inlines */
 
+/* sm & def */
+
 sm {
   text-decoration-style: italic;
 }
@@ -140,6 +142,8 @@ sm:hover def {
   color: gray;
 }
 
+/* note */
+
 note {
   outline: solid 2px;
   padding: 0.25em 0.5em;
@@ -149,6 +153,15 @@ note {
 
 note::before {
   content: "note:"
+}
+
+ps {
+  content: "(postscript...)";
+  text-decoration-style: italic;
+}
+
+ps:hover {
+  display:
 }
 
 /* iframes and forms */
