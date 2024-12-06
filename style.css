@@ -127,7 +127,20 @@ nodisqus {
 /* definition/extra info */
 /* note to self: block creates inlines */
 
-/* sm & def */
+/* note: necessary knowledge */
+
+note {
+  outline: solid 2px;
+  padding: 0.25em 0.5em;
+  background-color: #fcfc83;
+  outline-color: #f2f20d;      
+}
+
+note::before {
+  content: "note:"
+}
+
+/* sm & def: optional knowledge */
 
 sm {
   text-decoration-style: italic;
@@ -142,26 +155,21 @@ sm:hover def {
   color: gray;
 }
 
-/* note */
+/* ps: unneeded knowledge */
 
-note {
-  outline: solid 2px;
-  padding: 0.25em 0.5em;
-  background-color: #fcfc83;
-  outline-color: #f2f20d;      
-}
+/* TODO: fix ps on not hovering content */
 
-note::before {
-  content: "note:"
-}
-
-ps {
+ps:not(:hover) {
   content: "(postscript...)";
   text-decoration-style: italic;
 }
 
-ps:hover {
-  display:
+ps:hover::before {
+  content: "(p.s.: "
+}
+
+ps:hover::after {
+  content: ")"
 }
 
 /* iframes and forms */
