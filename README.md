@@ -6,7 +6,7 @@ w3schools
 
 #7070ff #484
 
-i have to move this to github
+guys, did it mirror?
 
 https://archive.org/details/ducklife1ost
 
