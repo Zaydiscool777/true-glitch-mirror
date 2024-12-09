@@ -4,11 +4,37 @@
   </head>
   <body>
     <script>
-      
+      document.querySelectorAll(".heading").forEach(heading => {
+  const id = heading.id; // Use the heading's ID
+  if (id) {
+    // Create the link element
+    const link = document.createElement("a");
+    link.href = `#${id}`; // Link to itself using the ID
+    link.textContent = "🔗"; // Add an icon (e.g., chain link emoji)
+    link.title = "Copy link to this section"; // Tooltip for clarity
+    heading.appendChild(link); // Append the link to the heading
+  }
+});
     </script>
-    <link rel="stylesheet" href="/style.css" />
-    <note>
-      a
-    </note>
+    <style>
+    .heading {
+  position: relative;
+}
+
+.heading a {
+  text-decoration: none;
+  color: inherit;
+  position: absolute;
+  right: -20px; /* Adjust to position the link icon */
+  font-size: 0.8em;
+  visibility: hidden; /* Hidden until hover */
+}
+
+.heading:hover a {
+  visibility: visible;
+}
+    </style>
+    <h2 id="section-1" class="heading">My Heading</h2>
+<h2 id="section-2" class="heading">Another Heading</h2>
   </body>
 </html>
