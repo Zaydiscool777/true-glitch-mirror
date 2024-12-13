@@ -138,7 +138,7 @@ note {
 }
 
 note::before {
-  content: "note:"
+  content: "note: "
 }
 
 /* sm & def: optional knowledge */

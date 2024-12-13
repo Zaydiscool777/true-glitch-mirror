@@ -149,7 +149,7 @@ note {
 }
 
 note::before {
-  content: "note:"
+  content: "note: "
 }
 
 /* iframes and forms */
