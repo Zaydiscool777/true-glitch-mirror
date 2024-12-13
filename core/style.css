@@ -128,7 +128,7 @@ nodisqus {
 /* note to self: block creates inlines */
 
 sm {
-  text-decoration-style: italic;
+  font: italic;
 }
 
 def {
@@ -150,6 +150,10 @@ note {
 
 note::before {
   content: "note: "
+}
+
+ps {
+  display: none;
 }
 
 /* iframes and forms */

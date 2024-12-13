@@ -144,7 +144,7 @@ note::before {
 /* sm & def: optional knowledge */
 
 sm {
-  text-decoration-style: italic;
+  font: italic;
 }
 
 def {
@@ -162,7 +162,7 @@ sm:hover def {
 
 ps:not(:hover) {
   content: "(postscript...)";
-  text-decoration-style: italic;
+  font: italic;
 }
 
 ps:hover::before {
