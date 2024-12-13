@@ -141,6 +141,7 @@ sm:hover def {
 }
 
 note {
+  display: block;
   outline: solid 2px;
   padding: 0.25em 0.5em;
   background-color: #fcfc83;

@@ -99,7 +99,7 @@ a:link {
 /* visited link */
 a:visited {
   color: gray;
-  font-size: 12px;
+  font-size: .75em;
 }
 
 /* mouse over link */
@@ -130,6 +130,7 @@ nodisqus {
 /* note: necessary knowledge */
 
 note {
+  display: block;
   outline: solid 2px;
   padding: 0.25em 0.5em;
   background-color: #fcfc83;
