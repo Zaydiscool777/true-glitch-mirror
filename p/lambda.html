@@ -75,19 +75,18 @@
     <h2>Values and Constants</h2>
 
     <p>
-      There are three type of values: Numbers, characters and default values
-      represented as <kbd>_</kbd>. A list is just a collection of values that
+      There are three type of values: Numbers, characters and default values (<kbd>_</kbd>). A list is just a collection of values that
       are next to each other. Default values behave based on the function they
-      are pushed into, f.e. <kbd>_</kbd> into <kbd>+</kbd> is 0,
+      are pushed into, e.g. <kbd>_</kbd> into <kbd>+</kbd> is 0,
       <kbd>_</kbd> into <kbd>*</kbd> is 1. Numbers and characters can be used
       interchangeably and will be casted to and from their ASCII value, though
       the resulting type will be the one of the main port. There can be only one
-      value on a tile (exceptions are <kbd>&</kbd> and <kbd>~.</kbd>, which can
+      value on a tile (The two exceptions are <kbd>&</kbd> and <kbd>~.</kbd>, which can
       queue values).
     </p>
 
     <p>
-      Strings are enclosed within single quotes, f.e.
+      Strings are enclosed within single quotes, e.g.
       <code>'Hello World!'</code>. If numbers, strings or <kbd>_</kbd> are at a
       start of a conveyor belt line, they are generators and will produce their
       respective value whenever possible. If they are in the middle of a
@@ -103,7 +102,7 @@
     <h2>Functions</h2>
 
     <p>
-      Every function has a fixed number of input and output ports, f.e.
+      Every function has a fixed number of input and output ports, e.g.
       <kbd>+</kbd> has 2 inputs and 1 output. Conveyor belt directions are
       inferred to connect each input to an output port. A program that is
       ambigious is erroneous. In this case, the conveyor belt operators are, as
@@ -201,7 +200,7 @@
       <sm
         >(But wait, why does row 2 look like that?)
         <def
-          > This is because you put the <kbd>.</kbd> under the function you want
+          > This is because you put the <kbd>.</kbd> to under the function you want
           to modify, then treat it as if it wasn't there. This is simply a minor
           inconvenience when dealing with grid esolangs like these.</def
         ></sm
@@ -238,7 +237,7 @@
       The _x and _y shows what each function treats the default value
       (<kbd>_</kbd>) like.</def> 
     </sm>
-    <sm><def>this table was made via <a href="https://www.tablesgenerator.com/html_tables">HTML Tables Generator</a><</ps>
+      <sm>(ps<def>: this table was made via <a href="https://www.tablesgenerator.com/html_tables">HTML Tables Generator</a></def>)</sm>
 
     <!-- remind me to not use seo.ai. -->
     <table>
@@ -657,8 +656,8 @@
       </tbody>
     </table>
       <hr>
-      This is a remaster of the documentation of the progamming language (that could be esoteric),
-       convey. Thanks to, uh, xash, for the original docs. you can access his itch at <a href="https://xash.itch.io">
+      This is a remaster (or really just an html-ified version) of the documentation of the progamming language (that could be esoteric),
+       convey. Thanks to xash for the original docs. you can access his itch at <a href="https://xash.itch.io">
       xash.itch.io</a>. The interpreter? is <a href="https://xn--wxa.land/convey/run.html">here</a>, and
        <a href="mailto:xash@xn--wxa.land">this</a> is his mail. (he also has a broken rss feed)
       <br>
