@@ -1,5 +1,5 @@
 google classic site template???
-feel free to join by creating an issue on github mirror: [here](https://github.com/Zaydiscool777/glitch-mirror)
+feel free to join by creating an issue on github mirror: [here](https://github.com/Zaydiscool777/true-glitch-mirror)
 
 search up emotiguy
 
