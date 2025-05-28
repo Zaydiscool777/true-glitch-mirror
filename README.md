@@ -8,6 +8,7 @@ w3schools
 #7070ff #484
 
 guys, did it mirror?
+goodbye glitch.
 
 https://archive.org/details/ducklife1ost
 
